@@ -82,10 +82,11 @@ function toggleHamburger() {
 
 <template>
 	<header>
-		<nav class="navbar">
-			<a class="topbar-menu cursor-pointer" @click="toggleHamburger">
-				<icon>menu</icon>
+		<nav class="nav-bar">
+			<a class="topbar-menu navbar-menu-icon" @click="toggleHamburger">
+				<icon class="material-icons">menu</icon>
 			</a>
+			<!-- <span class="material-icons">menu</span> -->
 			<div id="navbarSupportedContent" class="collapse navbar-collapse">
 				<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 					<li class="nav-item dropdown">
@@ -109,6 +110,8 @@ function toggleHamburger() {
 </template>
 
 <style scoped lang="scss">
+@import "../../sass/variables.scss";
+
 /* @import "~@/sass/bootstrap/_functions.scss";
 @import "~@/sass/bootstrap/_variables.scss";
 @import "~@/sass/bootstrap/mixins/_breakpoints.scss"; */
@@ -124,6 +127,10 @@ header {
     font-size: 0.9rem;
   } */
 
+	.nav-bar {
+		padding: 0.5rem 1rem;
+		background-color: $mid-lighter-gray;
+	}
 	// Condensed Nav for Small Devices
 	.basic-nav {
 		/* @include media-breakpoint-down(sm) {
@@ -149,7 +156,14 @@ header {
 			}
 		}
 	}
-
+	.navbar-menu-icon {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		width: fit-content;
+		text-decoration: none;
+		color: black;
+	}
 	nav {
 		ul {
 			/* background-color: $gray-100; */

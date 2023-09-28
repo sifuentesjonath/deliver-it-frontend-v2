@@ -1,3 +1,4 @@
+@import "../sass/variables.scss";
 /* TODO: 
   - Make this 'base' file the main place where all the color pallette is going to be defined
   - This file might convert into a .scss file
@@ -88,6 +89,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
+	font-family: "Arvo", sans-serif;
+}
 
-	background-color: #f0f2f6;
+#app {
+	background-color: $light-gray;
 }

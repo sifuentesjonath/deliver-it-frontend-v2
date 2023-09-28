@@ -12,7 +12,7 @@ onMounted(() => {
 
 <template>
 	<div class="list-group list-group-flush">
-		<div class="sidebar-header bg-info mb-5">
+		<div class="sidebar-header bg-info">
 			<div class="sidebar-brand">
 				<img class="img-fluid" src="@/assets/icons/Deliver-It-Logo.svg" />
 			</div>
@@ -25,23 +25,26 @@ onMounted(() => {
 						:to="item.path"
 						class="list-nav-link cursor-pointer"
 					>
-						<!-- <span class="list-nav-icon">
+						<span class="list-nav-icon">
 							<i :class="item.icon.class" v-if="item.icon?.content">{{
 								item.icon.content
 							}}</i>
-						</span> -->
+						</span>
 						<span class="list-nav-label">{{ item.label }}</span>
 					</RouterLink>
 					<a v-if="item.children && item.children.length" class="list-nav-link">
-						<!-- <span class="list-nav-icon">
+						<span class="list-nav-icon">
 							<i :class="item.icon.class" v-if="item.icon?.content">{{
 								item.icon.content
 							}}</i>
-						</span> -->
+						</span>
 						<span class="list-nav-label">{{ item.label }}</span>
-						<!-- <span class="list-nav-icon list-nav-icon-sm">
+						<span
+							v-on:click="() => console.log('Clicked expand more!')"
+							class="list-nav-icon list-nav-icon-sm"
+						>
 							<i class="material-icons expand-icon">expand_more</i>
-						</span> -->
+						</span>
 					</a>
 					<ul
 						v-if="item.children && item.children.length"

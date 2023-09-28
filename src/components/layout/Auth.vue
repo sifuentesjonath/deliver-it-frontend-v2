@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
-import Footer from '../global/Footer.vue';
+import { RouterView } from "vue-router";
+import Footer from "../global/Footer.vue";
 // import { Component, Vue } from 'vue-property-decorator';
 // import TheFooter from '@/components/global/TheFooter.vue';
 
@@ -14,17 +14,16 @@ import Footer from '../global/Footer.vue';
 </script>
 
 <template>
-  <main class="d-flex flex-column">
-    <section class="d-flex h-100">
-      <h1>Auth layout</h1>
-      <RouterView />
-    </section>
-    <Footer />
-  </main>
+	<main class="d-flex flex-column">
+		<section class="d-flex h-100">
+			<RouterView />
+		</section>
+		<Footer />
+	</main>
 </template>
 
 <style scoped lang="scss">
-  main {
-    height: 100vh;
-  }
+main {
+	height: 100vh;
+}
 </style>

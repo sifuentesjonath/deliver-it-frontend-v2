@@ -1,0 +1,34 @@
+@import "../sass/variables.scss";
+
+/* === CUSTOM STYLES ===
+Load this file into the .vue file to load the custom styles into it.
+*/
+
+// == Buttons ==
+
+// Main style for all buttons
+.yellow-button,
+.black-button {
+	padding: 6px 26px;
+	border-radius: 2px;
+	border: 0;
+	min-width: 60px;
+}
+// Specific button styles
+.yellow-button {
+	color: $white;
+	background-color: $yellow;
+}
+.black-button {
+	color: $white;
+	background-color: $black;
+}
+
+// == Containers ==
+
+.container-box {
+	padding: 8px;
+	background-color: $white;
+	border: 1px solid $mid-light-gray;
+	border-radius: 4px;
+}
